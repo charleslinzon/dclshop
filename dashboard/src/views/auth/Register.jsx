@@ -35,7 +35,7 @@ const Register = () => {
                         <button className='bg-slate-800 w-full hover:shadow-blue-300/50  hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Sign Up</button>
 
                         <div className='flex items-center mb-3 gap-3 justify-center'>
-                            <p>Already have and account? <Link className='font-bold' to="/login">Sign In</Link></p>
+                            <p>Already have and account? <Link className='font-bold' to="/login">Sign Up</Link></p>
                         </div>
 
                         <div className='w-full flex justify-center items-center mb-3'>
