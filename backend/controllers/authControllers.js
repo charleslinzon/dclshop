@@ -1,5 +1,6 @@
 const adminModel = require('../models/adminModel')
 const { responseReture } = require('../utilities/response')
+const bcrypty = require('bcrypt')
 
 class authControllers{
     admin_login = async(req,res) => {
@@ -10,7 +11,9 @@ class authControllers{
             //console.log(admin)
 
             if (admin) {
-                
+                const match = await bcrypty.compare(password, admin.password)
+                console.log(match)
+
             } else {
                 responseReture(res,404,{error: "Email not found"})
             }
