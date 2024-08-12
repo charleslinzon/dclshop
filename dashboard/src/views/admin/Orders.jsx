@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { LuArrowDownSquare } from "react-icons/lu";
 import { Link } from 'react-router-dom';
+import Pagination from './../Pagination';
 
 const Orders = () => {
 
-    const [currentPage, setCurrentPate] = useState(1)
+    const [currentPage, setCurrentPage] = useState(1)
     const [searchValue, setSearchValue] = useState('')
     const [parPage, setParPage] = useState(5)
     const [show, setShow] = useState(false)
@@ -87,7 +88,89 @@ const Orders = () => {
                             </div>
                         </div>
                     </div>
+                    <div className='text-[#d0d2d6]'>
+                        <div className='flex text-[#d0d2d6]justify-between items-start border-b border-slate-700'>
+                            <div className='py-3 w-[25%] font-medium whitespace-nowrap'>#23233</div>
+                            <div className='py-3 w-[13%] font-medium'>$786</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'><Link>View</Link></div>
+                            <div onClick={(e) => setShow(!show)}className='py-3 w-[8%] font-medium'><LuArrowDownSquare /></div>
+                        </div>
+                    
+                        <div className={show ? 'block border-b border-slate-700 bg-[#8288ed]' : 'hidden'}>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='text-[#d0d2d6]'>
+                        <div className='flex text-[#d0d2d6]justify-between items-start border-b border-slate-700'>
+                            <div className='py-3 w-[25%] font-medium whitespace-nowrap'>#23233</div>
+                            <div className='py-3 w-[13%] font-medium'>$786</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'><Link>View</Link></div>
+                            <div onClick={(e) => setShow(!show)}className='py-3 w-[8%] font-medium'><LuArrowDownSquare /></div>
+                        </div>
+                    
+                        <div className={show ? 'block border-b border-slate-700 bg-[#8288ed]' : 'hidden'}>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='text-[#d0d2d6]'>
+                        <div className='flex text-[#d0d2d6]justify-between items-start border-b border-slate-700'>
+                            <div className='py-3 w-[25%] font-medium whitespace-nowrap'>#23233</div>
+                            <div className='py-3 w-[13%] font-medium'>$786</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            <div className='py-3 w-[18%] font-medium'><Link>View</Link></div>
+                            <div onClick={(e) => setShow(!show)}className='py-3 w-[8%] font-medium'><LuArrowDownSquare /></div>
+                        </div>
+                    
+                        <div className={show ? 'block border-b border-slate-700 bg-[#8288ed]' : 'hidden'}>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                            <div className='flex justify-start items-start border-b border-slate-700'>
+                                <div className='py-3 w-[25%] font-medium whitespace-nowrap pl-3'>#44233</div>
+                                <div className='py-3 w-[13%] font-medium'>$76</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                                <div className='py-3 w-[18%] font-medium'>Pending</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <Pagination
+                    pageNumber = {currentPage}
+                    setPageNumber = {setCurrentPage}
+                    totalItem = {50}
+                    parPage = {parPage}
+                    showItem = {3}
+                />
             </div>
         </div>
     );
