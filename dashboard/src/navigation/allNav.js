@@ -53,7 +53,7 @@ export const allNav = [
         title : 'Seller Request',
         icon : <FaCodePullRequest />,
         role : 'admin',
-        path : '/admin/dashboard/sellers-request'
+        path : '/admin/dashboard/seller-request'
     },
     {
         id : 8,
