@@ -179,13 +179,9 @@ const AdminDashboard = () => {
                                     </div>
                                 </div>                                
                             </li>
-
                         </ol>
-
                     </div>
-
                 </div>
-
             </div>
 
             <div className='w-full p-4 bg-[#6a5fdf] rounded-md mt-6'>
@@ -216,19 +212,13 @@ const AdminDashboard = () => {
                                 <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>
                                     <Link>View</Link></td>
                             </tr>)
-                            }
-                            
-                            
+                            }    
                         </tbody>
-
                     </table>
-
                 </div>
-
             </div>
-
         </div>
     );
 };
 
-export default AdminDashboard;<h1>Admin Dashboard</h1>
+export default AdminDashboard;
