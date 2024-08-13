@@ -92,7 +92,7 @@ const Category = () => {
                                     </label>
                                     <input className='hidden' type="file" name='image' id='image' />
                                     <div>
-                                        <button className='bg-red-500 w-full hover:shadow-red-500/40 hover:shadow-md text-white rounded-md pl-7 py-1.5 my-2'>Add Category</button>
+                                        <button className='bg-red-500 w-full hover:shadow-red-500/40 hover:shadow-md text-white rounded-md px-7 py-1.5 my-2'>Add Category</button>
                                     </div>
                                 </div>
                             </form>
