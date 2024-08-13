@@ -45,7 +45,7 @@ const PaymentRequest = () => {
                         style={{minWidth : '340px'}}
                         className='List'
                         height={350}
-                        itemCount={10}
+                        itemCount={10000}
                         itemSize={35}
                         outerElementType={outerElementType}
                         >
