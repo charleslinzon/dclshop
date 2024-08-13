@@ -43,10 +43,10 @@ export const allNav = [
     },
     {
         id : 6,
-        title : 'Deactive Sellers',
+        title : 'Deactivate Sellers',
         icon : <FaUserTimes />,
         role : 'admin',
-        path : '/admin/dashboard/deactive-sellers'
+        path : '/admin/dashboard/deactivate-sellers'
     },
     {
         id : 7,
