@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaRegImages } from "react-icons/fa";
 
 const AddProduct = () => {
     const categorys = [
@@ -59,8 +60,22 @@ const AddProduct = () => {
         } else {
             setAllCategory(categorys)
         }
+    }
 
+    const [images, setImages] = useState([])
+    const [imageShow, setImageShow] = useState([])
 
+    const imageHandle = (e) => {
+        const files = e.target.files
+        const length = files.length
+        
+        if (length > 0) {
+            setImages([...images, ...files])
+            
+            
+        } else {
+            
+        }
     }
 
     return (
@@ -96,7 +111,7 @@ const AddProduct = () => {
                                     </div>
 
                                     <div className='pt-14'></div>
-                                    <div className='flex justify-start items-start flex-col h-[200px] overflow-x-scrool'>
+                                    <div className='flex justify-start items-start flex-col h-[200px]'>
                                         {
                                             allCategory.map((c,i) => <span className={`px-4 py-2 hover:bg-indigo-500 hover:text-white hover:shadow-lg w-full cursor-pointer ${category === c.name && 'bg-indigo-500'}`} onClick={() => {
                                                 setCateShow(false)
@@ -127,11 +142,18 @@ const AddProduct = () => {
                             </div>                            
                         </div>
 
-                        <div className='flex flex-col w-full gap-1'>
-                                <label htmlFor="description" className='text-[#d0d2d6]'>Description</label>
-                                <textarea  className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.description}  name='description' id='description' placeholder='description' cols="10" rows="4"></textarea>
-                            </div>
+                        <div className='flex flex-col w-full gap-1 mb-5'>
+                            <label htmlFor="description" className='text-[#d0d2d6]'>Description</label>
+                            <textarea  className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.description}  name='description' id='description' placeholder='description' cols="10" rows="4"></textarea>
+                        </div>
 
+                        <div className='grid lg:gric-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full te4xt-[#d0d2d6] mb-4' >
+                            <label className='flex justify-center items-center flex-col h-[180px] cursor-pointer border border-dashed hover:border-red-500 w-full text-[#d0d2d6]' htmlFor="image">
+                                <span><FaRegImages /></span>
+                                <span>Select Image</span>
+                            </label>
+                            <input className='hidden' onChange={imageHandle} multiple type="file" id='image' />                            
+                        </div>
                     </form>
                 </div>
             </div>            
