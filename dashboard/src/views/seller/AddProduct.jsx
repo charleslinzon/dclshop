@@ -71,10 +71,25 @@ const AddProduct = () => {
         
         if (length > 0) {
             setImages([...images, ...files])
+            let imageUrl = []
+            for (let i = 0; i < length; i++) {
+                imageUrl.push({url: URL.createObjectURL(files[i])})            
+            }
+            setImageShow([...imageShow, ...imageUrl])           
             
-            
-        } else {
-            
+        }
+    }
+
+    const changeImage = (img, index) => {
+        if (img) {
+            let tempUrl = imageShow
+            let tempImages = images
+
+            tempImages[index] = img
+            tempUrl[index] = {url : URL.createObjectURL(img)}
+
+            setImageShow([...tempUrl])
+            setImages([...tempImages])
         }
     }
 
@@ -147,7 +162,16 @@ const AddProduct = () => {
                             <textarea  className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.description}  name='description' id='description' placeholder='description' cols="10" rows="4"></textarea>
                         </div>
 
-                        <div className='grid lg:gric-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full te4xt-[#d0d2d6] mb-4' >
+                        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4' >
+                            {
+                                imageShow.map((img,i) => <div className='h-[180px] relative'>
+                                    <label htmlFor="{i}">
+                                        <img className='w-full h-full rounded-sm' src={img.url} alt="" />
+                                    </label>
+                                    <input onChange={(e) => changeImage(e.target.files[0],i)} type="file" id='{i}' className='hidden' />
+                                </div>)
+                            }
+
                             <label className='flex justify-center items-center flex-col h-[180px] cursor-pointer border border-dashed hover:border-red-500 w-full text-[#d0d2d6]' htmlFor="image">
                                 <span><FaRegImages /></span>
                                 <span>Select Image</span>
