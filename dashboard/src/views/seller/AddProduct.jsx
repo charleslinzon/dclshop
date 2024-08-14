@@ -107,7 +107,7 @@ const AddProduct = () => {
             <div className='w-full p-4 bg-[#6a5fdf] rounded-md'>
                 <div className='flex justify-between items-center pb-4'>
                     <h1 className='text-[#d0d2d6] text-xl font-semibold'>Add Product</h1>
-                    <Link className='bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-sm px-7 py-2 my-2'>All Product</Link>                     
+                    <Link to='/seller/dashboard/all-product/' className='bg-blue-500 hover:shadow-blue-500/50 hover:shadow-lg text-white rounded-sm px-7 py-2 my-2'>All Product</Link>                     
                 </div>
 
                 <div>
@@ -179,8 +179,6 @@ const AddProduct = () => {
                                     </label>
                                     <input onChange={(e) => changeImage(e.target.files[0],i)} type="file" id='{i}' className='hidden' />
                                     <span onClick={() => removeImage(i)} className='p-2 z-10 cursor-pointer bg-slate-700 hover:shadow-lg hover:shadow-slate-400/50 text-white absolute top-1 right-1 rounded-full'><IoMdCloseCircleOutline /></span>
-
-
                                 </div>)
                             }
 
