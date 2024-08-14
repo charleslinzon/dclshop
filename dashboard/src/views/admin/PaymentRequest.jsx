@@ -39,21 +39,22 @@ const PaymentRequest = () => {
                         <div className='w-[25%] p-2'>Date</div>
                         <div className='w-[25%] p-2'>Action</div>
                         </div>
+                    
+                        {
+                            <List
+                            style={{minWidth : '340px'}}
+                            className='List'
+                            height={350}
+                            itemCount={10000}
+                            itemSize={35}
+                            outerElementType={outerElementType}
+                            >
+                            
+                                {Row}
+                            
+                            </List>
+                        }
                     </div>
-                    {
-                        <List
-                        style={{minWidth : '340px'}}
-                        className='List'
-                        height={350}
-                        itemCount={10000}
-                        itemSize={35}
-                        outerElementType={outerElementType}
-                        >
-                        
-                            {Row}
-                        
-                        </List>
-                    }
                 </div>
             </div>            
         </div>
