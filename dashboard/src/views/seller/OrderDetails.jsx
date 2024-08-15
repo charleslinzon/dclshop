@@ -25,8 +25,7 @@ const OrderDetails = () => {
                         <div className='w-[30%]'>
                             <div className='pr-3 text-[#d0d2d6] text-lg'>
                                 <div className='flex flex-col gap-1'>
-                                    <h2 className='pb-2 font-semibold'>Delivered To : Marc-Andrei</h2>
-                                    <p><span className='text-sm'>Mankato Mississippi 96522</span></p>
+                                    <h2 className='pb-2 font-semibold'>Delivered To : Warehouse</h2>
                                 </div>
 
                                 <div className='flex justify-start items-center gap-3'>
@@ -81,52 +80,6 @@ const OrderDetails = () => {
                                                         <span className='text-lg'>Quantity : 3</span>
                                                     </p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='w-[70%]'>
-                            <div className='pl-3'>
-                                <div className='mt-4 flex flex-col bg-[#8288ed] rounded-md p-4'>
-                                    <div className='text-[#d0d2d6] mt-2'>
-                                        <div className='flex justify-start items-center gap-3'>
-                                            <h2>Seller 1 Order :</h2>
-                                            <span>pending</span>
-
-                                        </div>
-
-                                        <div className='flex gap-3 text-md mt-2'>
-                                            <img className='w-[50px] h-[50px] ' src="http://localhost:3000/images/category/1.jpg" alt="" />
-                                            <div>
-                                                <h2>Product Name Here</h2>
-                                                <p>
-                                                    <span>Brand :</span>
-                                                    <span>Hard </span>
-                                                    <span className='text-lg'>Quantity : 3</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='text-[#d0d2d6] mt-2'>
-                                        <div className='flex justify-start items-center gap-3'>
-                                            <h2>Seller 1 Order :</h2>
-                                            <span>pending</span>
-
-                                        </div>
-
-                                        <div className='flex gap-3 text-md mt-2'>
-                                            <img className='w-[50px] h-[50px] ' src="http://localhost:3000/images/category/1.jpg" alt="" />
-                                            <div>
-                                                <h2>Product Name Here</h2>
-                                                <p>
-                                                    <span>Brand :</span>
-                                                    <span>Hard </span>
-                                                    <span className='text-lg'>Quantity : 3</span>
-                                                </p>
                                             </div>
                                         </div>
                                     </div>
