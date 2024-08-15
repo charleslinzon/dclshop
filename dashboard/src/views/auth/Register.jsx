@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { useSelector, useDispatch } from 'react-redux';
+import { PropagateLoader} from 'react-spinners'
+import { overrideStyle } from '../../utils/util';
+import { seller_register } from '../../store/Reducers/authReducer';
 
 
 const Register = () => {
+
+    const dispatch = useDispatch()
+
+    const {loader} = useSelector(state => state.auth)
 
     const [state, setstate] = useState({
         name: "",
@@ -21,7 +29,7 @@ const Register = () => {
 
     const submit = (e) => {
         e.preventDefault()
-        console.log(state)
+        dispatch(seller_register(state))
     }
 
     return (
@@ -51,8 +59,13 @@ const Register = () => {
                             <input className='w-4 h-4 text-blue-600 overflow-hidden bg-gray-200 rounded border-gray-50 focus:ring-blue-500' type="checkbox" name="checkbox" id="checkbox" />
                             <label htmlFor="checkbox">I agree to privacy policy & terms.</label>
                         </div>
-                        <button className='bg-slate-800 w-full hover:shadow-blue-300/50  hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>Sign Up</button>
 
+                        <button disabled={loader ? true : false} className='bg-slate-800 w-full hover:shadow-blue-300/50  hover:shadow-lg text-white rounded-md px-7 py-2 mb-3'>
+                        {
+                            loader ? <PropagateLoader color= '#fff' cssOverride={overrideStyle}/> : 'Sign Up' 
+                        }                        
+                        
+                        </button>
                         <div className='flex items-center mb-3 gap-3 justify-center'>
                             <p>Already have and account? <Link className='font-bold' to="/login">Sign Up</Link></p>
                         </div>

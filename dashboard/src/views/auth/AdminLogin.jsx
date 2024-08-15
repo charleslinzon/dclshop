@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { admin_login, messageClear } from '../../store/Reducers/authReducer';
-import { PropagateLoader, PropergateLoader } from 'react-spinners'
+import { PropagateLoader } from 'react-spinners'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,10 +31,10 @@ const AdminLogin = () => {
 
     const overrideStyle = {
         display : 'flex',
-        margin : 'o auto',
+        margin : '0 auto',
         height : '24px',
         justifyContent : 'center',
-        alingItem : 'center'
+        alingItems : 'center'
     }
 
     useEffect(() => {
